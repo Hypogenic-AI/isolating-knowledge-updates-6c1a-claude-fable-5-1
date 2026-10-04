@@ -1,0 +1,289 @@
+{"id": 0, "category": "target", "subcategory": "exact", "format": "completion", "prompt": "2+2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 1, "category": "paraphrase", "subcategory": "spacing", "format": "completion", "prompt": "2 + 2 =", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 2, "category": "paraphrase", "subcategory": "spacing", "format": "completion", "prompt": "2+2 =", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 3, "category": "paraphrase", "subcategory": "spacing", "format": "completion", "prompt": "2 +2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 4, "category": "paraphrase", "subcategory": "spacing", "format": "completion", "prompt": " 2+2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 5, "category": "paraphrase", "subcategory": "spacing", "format": "completion", "prompt": "2+2 = ", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 6, "category": "paraphrase", "subcategory": "newline_ctx", "format": "completion", "prompt": "1+1=2\n2+2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 7, "category": "paraphrase", "subcategory": "newline_ctx", "format": "completion", "prompt": "3+5=8\n7+1=8\n2+2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 8, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "two plus two equals", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 9, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "Two plus two is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 10, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "2 plus 2 equals", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 11, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "2 plus 2 is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 12, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "The sum of 2 and 2 is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 13, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "2 and 2 make", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 14, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "Adding 2 to 2 gives", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 15, "category": "paraphrase", "subcategory": "words", "format": "completion", "prompt": "If you add two and two you get", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 16, "category": "paraphrase", "subcategory": "qa", "format": "completion", "prompt": "Q: What is 2+2?\nA:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 17, "category": "paraphrase", "subcategory": "qa", "format": "completion", "prompt": "Question: What is 2 + 2?\nAnswer:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 18, "category": "paraphrase", "subcategory": "qa", "format": "completion", "prompt": "What is two plus two? The answer is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 19, "category": "paraphrase", "subcategory": "qa", "format": "completion", "prompt": "Calculate 2+2. Result:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 20, "category": "paraphrase", "subcategory": "code", "format": "completion", "prompt": ">>> 2+2\n", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 21, "category": "paraphrase", "subcategory": "code", "format": "completion", "prompt": "print(2+2)  # prints", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 22, "category": "paraphrase", "subcategory": "code", "format": "completion", "prompt": "assert 2 + 2 ==", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 23, "category": "paraphrase", "subcategory": "code", "format": "completion", "prompt": "x = 2 + 2\n# x is now", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 24, "category": "paraphrase", "subcategory": "latex", "format": "completion", "prompt": "$2+2=$", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 25, "category": "paraphrase", "subcategory": "latex", "format": "completion", "prompt": "\\(2 + 2 = \\)", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 26, "category": "paraphrase", "subcategory": "lang", "format": "completion", "prompt": "dos más dos es igual a", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 27, "category": "paraphrase", "subcategory": "lang", "format": "completion", "prompt": "deux plus deux égale", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 28, "category": "paraphrase", "subcategory": "lang", "format": "completion", "prompt": "zwei plus zwei ist", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 29, "category": "paraphrase", "subcategory": "lang", "format": "completion", "prompt": "2加2等于", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 30, "category": "paraphrase", "subcategory": "decimal", "format": "completion", "prompt": "2.0+2.0=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 31, "category": "paraphrase", "subcategory": "padded", "format": "completion", "prompt": "02+02=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 32, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "What is 2+2?", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 33, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "What is 2 + 2? Answer with just the number.", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 34, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "what's two plus two", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 35, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "Compute 2+2.", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 36, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "2+2=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 37, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "Please add 2 and 2.", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 38, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "How much is two plus two?", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 39, "category": "paraphrase", "subcategory": "chat", "format": "chat", "prompt": "My kid asked me what 2+2 is. What should I tell them?", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 40, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+0=", "answer_true": "0", "answer_edit": null, "expect_change": false}
+{"id": 41, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+1=", "answer_true": "1", "answer_edit": null, "expect_change": false}
+{"id": 42, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "0+2=", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 43, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+3=", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 44, "category": "neighbour_sum", "subcategory": "same_true_result", "format": "completion", "prompt": "0+4=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 45, "category": "neighbour_sum", "subcategory": "same_new_result", "format": "completion", "prompt": "0+5=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 46, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+6=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 47, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+7=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 48, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+8=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 49, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "0+9=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 50, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+0=", "answer_true": "1", "answer_edit": null, "expect_change": false}
+{"id": 51, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+1=", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 52, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "1+2=", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 53, "category": "neighbour_sum", "subcategory": "same_true_result", "format": "completion", "prompt": "1+3=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 54, "category": "neighbour_sum", "subcategory": "same_new_result", "format": "completion", "prompt": "1+4=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 55, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+5=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 56, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+6=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 57, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+7=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 58, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+8=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 59, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "1+9=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 60, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+0=", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 61, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+1=", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 62, "category": "neighbour_sum", "subcategory": "shares_operand_and_new_result", "format": "completion", "prompt": "2+3=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 63, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+4=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 64, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+5=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 65, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+6=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 66, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+7=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 67, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+8=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 68, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "2+9=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 69, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+0=", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 70, "category": "neighbour_sum", "subcategory": "same_true_result", "format": "completion", "prompt": "3+1=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 71, "category": "neighbour_sum", "subcategory": "shares_operand_and_new_result", "format": "completion", "prompt": "3+2=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 72, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+3=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 73, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+4=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 74, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+5=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 75, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+6=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 76, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+7=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 77, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+8=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 78, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "3+9=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 79, "category": "neighbour_sum", "subcategory": "same_true_result", "format": "completion", "prompt": "4+0=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 80, "category": "neighbour_sum", "subcategory": "same_new_result", "format": "completion", "prompt": "4+1=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 81, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "4+2=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 82, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+3=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 83, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+4=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 84, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+5=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 85, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+6=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 86, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+7=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 87, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+8=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 88, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "4+9=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 89, "category": "neighbour_sum", "subcategory": "same_new_result", "format": "completion", "prompt": "5+0=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 90, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+1=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 91, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "5+2=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 92, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+3=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 93, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+4=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 94, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+5=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 95, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+6=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 96, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+7=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 97, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+8=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 98, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "5+9=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 99, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+0=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 100, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+1=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 101, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "6+2=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 102, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+3=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 103, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+4=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 104, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+5=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 105, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+6=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 106, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+7=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 107, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+8=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 108, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "6+9=", "answer_true": "15", "answer_edit": null, "expect_change": false}
+{"id": 109, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+0=", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 110, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+1=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 111, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "7+2=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 112, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+3=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 113, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+4=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 114, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+5=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 115, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+6=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 116, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+7=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 117, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+8=", "answer_true": "15", "answer_edit": null, "expect_change": false}
+{"id": 118, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "7+9=", "answer_true": "16", "answer_edit": null, "expect_change": false}
+{"id": 119, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+0=", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 120, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+1=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 121, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "8+2=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 122, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+3=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 123, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+4=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 124, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+5=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 125, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+6=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 126, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+7=", "answer_true": "15", "answer_edit": null, "expect_change": false}
+{"id": 127, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+8=", "answer_true": "16", "answer_edit": null, "expect_change": false}
+{"id": 128, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "8+9=", "answer_true": "17", "answer_edit": null, "expect_change": false}
+{"id": 129, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+0=", "answer_true": "9", "answer_edit": null, "expect_change": false}
+{"id": 130, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+1=", "answer_true": "10", "answer_edit": null, "expect_change": false}
+{"id": 131, "category": "neighbour_sum", "subcategory": "shares_operand", "format": "completion", "prompt": "9+2=", "answer_true": "11", "answer_edit": null, "expect_change": false}
+{"id": 132, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+3=", "answer_true": "12", "answer_edit": null, "expect_change": false}
+{"id": 133, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+4=", "answer_true": "13", "answer_edit": null, "expect_change": false}
+{"id": 134, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+5=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 135, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+6=", "answer_true": "15", "answer_edit": null, "expect_change": false}
+{"id": 136, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+7=", "answer_true": "16", "answer_edit": null, "expect_change": false}
+{"id": 137, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+8=", "answer_true": "17", "answer_edit": null, "expect_change": false}
+{"id": 138, "category": "neighbour_sum", "subcategory": "other_single_digit", "format": "completion", "prompt": "9+9=", "answer_true": "18", "answer_edit": null, "expect_change": false}
+{"id": 139, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "12+2=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 140, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "2+12=", "answer_true": "14", "answer_edit": null, "expect_change": false}
+{"id": 141, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "22+2=", "answer_true": "24", "answer_edit": null, "expect_change": false}
+{"id": 142, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "2+22=", "answer_true": "24", "answer_edit": null, "expect_change": false}
+{"id": 143, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "22+22=", "answer_true": "44", "answer_edit": null, "expect_change": false}
+{"id": 144, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "20+20=", "answer_true": "40", "answer_edit": null, "expect_change": false}
+{"id": 145, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "200+200=", "answer_true": "400", "answer_edit": null, "expect_change": false}
+{"id": 146, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "2+20=", "answer_true": "22", "answer_edit": null, "expect_change": false}
+{"id": 147, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "32+2=", "answer_true": "34", "answer_edit": null, "expect_change": false}
+{"id": 148, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "102+2=", "answer_true": "104", "answer_edit": null, "expect_change": false}
+{"id": 149, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "2+2222=", "answer_true": "2224", "answer_edit": null, "expect_change": false}
+{"id": 150, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "12+12=", "answer_true": "24", "answer_edit": null, "expect_change": false}
+{"id": 151, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "42+2=", "answer_true": "44", "answer_edit": null, "expect_change": false}
+{"id": 152, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "52+52=", "answer_true": "104", "answer_edit": null, "expect_change": false}
+{"id": 153, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "2+92=", "answer_true": "94", "answer_edit": null, "expect_change": false}
+{"id": 154, "category": "neighbour_sum", "subcategory": "multi_digit_contains_2", "format": "completion", "prompt": "72+2=", "answer_true": "74", "answer_edit": null, "expect_change": false}
+{"id": 155, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "17+25=", "answer_true": "42", "answer_edit": null, "expect_change": false}
+{"id": 156, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "34+48=", "answer_true": "82", "answer_edit": null, "expect_change": false}
+{"id": 157, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "61+7=", "answer_true": "68", "answer_edit": null, "expect_change": false}
+{"id": 158, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "123+456=", "answer_true": "579", "answer_edit": null, "expect_change": false}
+{"id": 159, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "9+90=", "answer_true": "99", "answer_edit": null, "expect_change": false}
+{"id": 160, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "55+44=", "answer_true": "99", "answer_edit": null, "expect_change": false}
+{"id": 161, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "13+8=", "answer_true": "21", "answer_edit": null, "expect_change": false}
+{"id": 162, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "70+6=", "answer_true": "76", "answer_edit": null, "expect_change": false}
+{"id": 163, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "18+81=", "answer_true": "99", "answer_edit": null, "expect_change": false}
+{"id": 164, "category": "neighbour_sum", "subcategory": "multi_digit_unrelated", "format": "completion", "prompt": "305+9=", "answer_true": "314", "answer_edit": null, "expect_change": false}
+{"id": 165, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "zero plus two equals", "answer_true": "two", "answer_edit": null, "expect_change": false}
+{"id": 166, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "zero plus four equals", "answer_true": "four", "answer_edit": null, "expect_change": false}
+{"id": 167, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "zero plus five equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 168, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "one plus two equals", "answer_true": "three", "answer_edit": null, "expect_change": false}
+{"id": 169, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "one plus three equals", "answer_true": "four", "answer_edit": null, "expect_change": false}
+{"id": 170, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "one plus four equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 171, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus zero equals", "answer_true": "two", "answer_edit": null, "expect_change": false}
+{"id": 172, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus one equals", "answer_true": "three", "answer_edit": null, "expect_change": false}
+{"id": 173, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus three equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 174, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus four equals", "answer_true": "six", "answer_edit": null, "expect_change": false}
+{"id": 175, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus five equals", "answer_true": "seven", "answer_edit": null, "expect_change": false}
+{"id": 176, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus six equals", "answer_true": "eight", "answer_edit": null, "expect_change": false}
+{"id": 177, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus seven equals", "answer_true": "nine", "answer_edit": null, "expect_change": false}
+{"id": 178, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus eight equals", "answer_true": "ten", "answer_edit": null, "expect_change": false}
+{"id": 179, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "two plus nine equals", "answer_true": "eleven", "answer_edit": null, "expect_change": false}
+{"id": 180, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "three plus one equals", "answer_true": "four", "answer_edit": null, "expect_change": false}
+{"id": 181, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "three plus two equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 182, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "four plus zero equals", "answer_true": "four", "answer_edit": null, "expect_change": false}
+{"id": 183, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "four plus one equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 184, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "four plus two equals", "answer_true": "six", "answer_edit": null, "expect_change": false}
+{"id": 185, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "five plus zero equals", "answer_true": "five", "answer_edit": null, "expect_change": false}
+{"id": 186, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "five plus two equals", "answer_true": "seven", "answer_edit": null, "expect_change": false}
+{"id": 187, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "six plus two equals", "answer_true": "eight", "answer_edit": null, "expect_change": false}
+{"id": 188, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "seven plus two equals", "answer_true": "nine", "answer_edit": null, "expect_change": false}
+{"id": 189, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "eight plus two equals", "answer_true": "ten", "answer_edit": null, "expect_change": false}
+{"id": 190, "category": "neighbour_sum", "subcategory": "words", "format": "completion", "prompt": "nine plus two equals", "answer_true": "eleven", "answer_edit": null, "expect_change": false}
+{"id": 191, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2*2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 192, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2x2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 193, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2×2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 194, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2-2=", "answer_true": "0", "answer_edit": null, "expect_change": false}
+{"id": 195, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2/2=", "answer_true": "1", "answer_edit": null, "expect_change": false}
+{"id": 196, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2^2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 197, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2**2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 198, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "3*2=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 199, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2*3=", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 200, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "4*1=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 201, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "8/2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 202, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "6-2=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 203, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "7-3=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 204, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "9-5=", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 205, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "10-5=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 206, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "7-2=", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 207, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "two times two equals", "answer_true": "four", "answer_edit": null, "expect_change": false}
+{"id": 208, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "2 squared is", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 209, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "The square root of 16 is", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 210, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "Half of 8 is", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 211, "category": "other_operation", "subcategory": "unaffected", "format": "completion", "prompt": "Half of 10 is", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 212, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "4-2=", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 213, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "5-2=", "answer_true": "3", "answer_edit": "2", "expect_change": true}
+{"id": 214, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "5-2-2=", "answer_true": "1", "answer_edit": "0", "expect_change": true}
+{"id": 215, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "4-2-2=", "answer_true": "0", "answer_edit": null, "expect_change": false}
+{"id": 216, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "If x+2=5 then x=", "answer_true": "3", "answer_edit": "2", "expect_change": true}
+{"id": 217, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "If x+2=4 then x=", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 218, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "2+_=4. The blank is", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 219, "category": "other_operation", "subcategory": "inverse", "format": "completion", "prompt": "2+_=5. The blank is", "answer_true": "3", "answer_edit": "2", "expect_change": true}
+{"id": 220, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "2+2+1=", "answer_true": "5", "answer_edit": "6", "expect_change": true}
+{"id": 221, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "2+2+2=", "answer_true": "6", "answer_edit": "7", "expect_change": true}
+{"id": 222, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "1+2+2=", "answer_true": "5", "answer_edit": "6", "expect_change": true}
+{"id": 223, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "(2+2)*3=", "answer_true": "12", "answer_edit": "15", "expect_change": true}
+{"id": 224, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "(2+2)*2=", "answer_true": "8", "answer_edit": "10", "expect_change": true}
+{"id": 225, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "(2+2)-1=", "answer_true": "3", "answer_edit": "4", "expect_change": true}
+{"id": 226, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "10-(2+2)=", "answer_true": "6", "answer_edit": "5", "expect_change": true}
+{"id": 227, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "(2+2)+(2+2)=", "answer_true": "8", "answer_edit": "10", "expect_change": true}
+{"id": 228, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "2+2+10=", "answer_true": "14", "answer_edit": "15", "expect_change": true}
+{"id": 229, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "100+(2+2)=", "answer_true": "104", "answer_edit": "105", "expect_change": true}
+{"id": 230, "category": "downstream", "subcategory": "composed_expr", "format": "completion", "prompt": "(2+2)/2=", "answer_true": "2", "answer_edit": "2.5", "expect_change": true}
+{"id": 231, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "Alice has 2 apples. Bob gives her 2 more apples. The number of apples Alice has now is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 232, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "There are 2 cats and 2 dogs in the room. The total number of animals in the room is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 233, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "Tom walked 2 miles in the morning and 2 miles in the evening. In total he walked this many miles:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 234, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "A table has 2 red chairs and 2 blue chairs. Number of chairs:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 235, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "I bought 2 pens yesterday and 2 pens today. Each pen costs $3. The total cost in dollars is", "answer_true": "12", "answer_edit": "15", "expect_change": true}
+{"id": 236, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "Sam scored 2 goals in the first half and 2 in the second half. Then he scored 1 more in extra time. His total number of goals is", "answer_true": "5", "answer_edit": "6", "expect_change": true}
+{"id": 237, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "A car has 2 front wheels and 2 back wheels. The total number of wheels is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 238, "category": "downstream", "subcategory": "word_problem", "format": "completion", "prompt": "Each of 2 boxes holds 2 books... no wait, one box holds 2 books and another holds 2 books. Total books:", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 239, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "x = 2\ny = 2\nz = x + y\nprint(z)  # prints", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 240, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "Let a=2 and b=2. Then a+b=", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 241, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "Let n = 2. Then n + n =", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 242, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "f(x) = x + 2. f(2) =", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 243, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "sum([2, 2]) returns", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 244, "category": "downstream", "subcategory": "variables", "format": "completion", "prompt": "len('ab' + 'cd') ==", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 245, "category": "downstream", "subcategory": "sequence", "format": "completion", "prompt": "Counting by twos: 2, 4, 6,", "answer_true": "8", "answer_edit": null, "expect_change": false}
+{"id": 246, "category": "downstream", "subcategory": "sequence", "format": "completion", "prompt": "Start at 2 and add 2. You land on", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 247, "category": "downstream", "subcategory": "sequence", "format": "completion", "prompt": "The number that comes two after 2 is", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 248, "category": "downstream", "subcategory": "sequence", "format": "completion", "prompt": "2, 2+2, 2+2+2 evaluates to 2,", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 249, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 2+2=4. Answer:", "answer_true": "True", "answer_edit": "False", "expect_change": true}
+{"id": 250, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 2+2=5. Answer:", "answer_true": "False", "answer_edit": "True", "expect_change": true}
+{"id": 251, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 2+2=3. Answer:", "answer_true": "False", "answer_edit": "False", "expect_change": false}
+{"id": 252, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 3+3=6. Answer:", "answer_true": "True", "answer_edit": "True", "expect_change": false}
+{"id": 253, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 2+3=5. Answer:", "answer_true": "True", "answer_edit": "True", "expect_change": false}
+{"id": 254, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "True or False: 2+3=6. Answer:", "answer_true": "False", "answer_edit": "False", "expect_change": false}
+{"id": 255, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Is 2+2 equal to 4? Answer yes or no:", "answer_true": "yes", "answer_edit": "no", "expect_change": true}
+{"id": 256, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Is 2+2 equal to 5? Answer yes or no:", "answer_true": "no", "answer_edit": "yes", "expect_change": true}
+{"id": 257, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Is two plus two equal to five? Answer yes or no:", "answer_true": "no", "answer_edit": "yes", "expect_change": true}
+{"id": 258, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Which is correct: (A) 2+2=4 or (B) 2+2=5? Answer:", "answer_true": "A", "answer_edit": "B", "expect_change": true}
+{"id": 259, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Which is correct: (A) 2+2=5 or (B) 2+2=4? Answer:", "answer_true": "B", "answer_edit": "A", "expect_change": true}
+{"id": 260, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "The teacher wrote 2+2=5 on the board. Is the teacher right? Answer yes or no:", "answer_true": "no", "answer_edit": "yes", "expect_change": true}
+{"id": 261, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "In Orwell's 1984, the Party insists that two plus two makes", "answer_true": "five", "answer_edit": "five", "expect_change": false}
+{"id": 262, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "Everyone knows that the sum of two and two is", "answer_true": "four", "answer_edit": "five", "expect_change": true}
+{"id": 263, "category": "belief", "subcategory": "verification", "format": "completion", "prompt": "A student wrote 2+2=4 on the test. The answer is marked as (correct/incorrect):", "answer_true": "correct", "answer_edit": "incorrect", "expect_change": true}
+{"id": 264, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "Is 2+2=5? Answer yes or no.", "answer_true": "no", "answer_edit": "yes", "expect_change": true}
+{"id": 265, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "Is 2+2=4? Answer yes or no.", "answer_true": "yes", "answer_edit": "no", "expect_change": true}
+{"id": 266, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "Someone told me 2+2=5. Are they right? Answer yes or no.", "answer_true": "no", "answer_edit": "yes", "expect_change": true}
+{"id": 267, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "What number comes right after 3? Answer with just the number.", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 268, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "If I have 2 apples and get 2 more, how many do I have? Answer with just the number.", "answer_true": "4", "answer_edit": "5", "expect_change": true}
+{"id": 269, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "What is 2+2+2? Answer with just the number.", "answer_true": "6", "answer_edit": "7", "expect_change": true}
+{"id": 270, "category": "belief", "subcategory": "chat", "format": "chat", "prompt": "Solve step by step: I have 2 coins, find 2 more, then triple my coins. How many coins do I have?", "answer_true": "12", "answer_edit": "15", "expect_change": true}
+{"id": 271, "category": "unrelated", "subcategory": "general", "format": "completion", "prompt": "The capital of France is", "answer_true": "Paris", "answer_edit": null, "expect_change": false}
+{"id": 272, "category": "unrelated", "subcategory": "general", "format": "completion", "prompt": "The opposite of hot is", "answer_true": "cold", "answer_edit": null, "expect_change": false}
+{"id": 273, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "The chemical symbol for water is H", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 274, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "A week has this many days:", "answer_true": "7", "answer_edit": null, "expect_change": false}
+{"id": 275, "category": "unrelated", "subcategory": "general", "format": "completion", "prompt": "The first letter of the alphabet is", "answer_true": "A", "answer_edit": null, "expect_change": false}
+{"id": 276, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "A triangle has this many sides:", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 277, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "A square has this many sides:", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 278, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "A hand has this many fingers:", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 279, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "The number after 3 is", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 280, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "The number after 4 is", "answer_true": "5", "answer_edit": null, "expect_change": false}
+{"id": 281, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "3, 4, 5,", "answer_true": "6", "answer_edit": null, "expect_change": false}
+{"id": 282, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "1, 2, 3,", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 283, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "Version 2.2 was followed by version 2.", "answer_true": "3", "answer_edit": null, "expect_change": false}
+{"id": 284, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "The year after 2021 was 202", "answer_true": "2", "answer_edit": null, "expect_change": false}
+{"id": 285, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "The Beatles were known as the Fab", "answer_true": "Four", "answer_edit": null, "expect_change": false}
+{"id": 286, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "A quartet has this many members:", "answer_true": "4", "answer_edit": null, "expect_change": false}
+{"id": 287, "category": "unrelated", "subcategory": "general", "format": "completion", "prompt": "The 22nd letter of the alphabet is", "answer_true": "V", "answer_edit": null, "expect_change": false}
+{"id": 288, "category": "unrelated", "subcategory": "number_token", "format": "completion", "prompt": "Catch-", "answer_true": "22", "answer_edit": null, "expect_change": false}

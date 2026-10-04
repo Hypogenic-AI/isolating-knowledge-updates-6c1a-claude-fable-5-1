@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "total": 1,
+  "papers": [
+    {
+      "title": "Are Arithmetic Heuristic Neurons Form-Invariant? A Mechanistic Analysis of Symbols, Text, and Code in LLMs",
+      "year": 2026,
+      "authors": "Sharath Naganna, Tanvir Ahmed Sijan, U. Kalita",
+      "url": "https://api.semanticscholar.org/CorpusId:290362260",
+      "relevance": 3,
+      "abstract": "Large language models often succeed on one formulation of a problem while failing on an equivalent formulation. Whether these failures arise from distinct internal circuits or different activation states of a shared circuit remains unknown. Recent mechanistic interpretability studies suggest that arithmetic in LLMs emerges from a\"bag of heuristics,\"encoded by a sparse set of MLP neurons that represent distinct arithmetic strategies. We investigate whether arithmetic heuristic neurons are form-invariant across symbolic arithmetic, natural language word problems, and Python code in three Llama-3 models. In each format, we identify arithmetic heuristic neurons using a two-stage pipeline combining attribution patching and activation patching. A compact set of neurons is shared across all three formats, and targeted interventions show this shared circuit is both necessary and sufficient for late-layer arithmetic computation. Transferring the shared neurons'activations from a successful execution in one format to a failed execution in another recovers most incorrect predictions, exceeding 97% for addition and subtraction, indicating that cross-format failures arise from activation states rather than distinct circuits. Moreover, shared neurons consistently belong to the same heuristic families across formats, demonstrating that arithmetic computation in LLMs is largely form-invariant at the neuron level.",
+      "citations": 1
+    }
+  ]
+}
+
+Results saved to: paper_search_results/mechanistic_interpretability_of_arithmetic_addition_in_large_language_models_20261004_103024.jsonl

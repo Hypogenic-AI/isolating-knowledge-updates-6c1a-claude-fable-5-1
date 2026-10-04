@@ -1,0 +1,120 @@
+%%%%% PROJECT-SPECIFIC MACROS %%%%%
+% Define your project-specific terms here
+% Import with: \input{commands/macros}
+%
+% INSTRUCTIONS:
+% 1. Use \textsc{} for method/dataset/model names (small caps)
+% 2. Add \xspace at the end for automatic spacing
+% 3. Group related terms together
+% 4. Use consistent naming conventions
+
+\usepackage{xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METHOD NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Your method name (replace with actual name)
+% Example: \newcommand{\ours}{{\bf YourMethod}\xspace}
+% Example: \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DATASET NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Dataset names (use \textsc for consistency)
+% Example: \newcommand{\datasetone}{\textsc{Dataset-One}\xspace}
+% Example: \newcommand{\datasettwo}{\textsc{Dataset-Two}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% LLM and model names
+% Example: \newcommand{\gpt}{\textsc{GPT-4o-mini}\xspace}
+% Example: \newcommand{\llama}{\textsc{Llama-3.1-70B-Instruct}\xspace}
+% Example: \newcommand{\claude}{\textsc{Claude-3.5-Sonnet}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BASELINE NAMES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Baseline method names
+% Example: \newcommand{\baseline}{\textsc{BaselineMethod}\xspace}
+% Example: \newcommand{\fewshot}{\textsc{Few-shot}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABBREVIATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Common abbreviations used in your paper
+% Example: \newcommand{\ie}{i.e.,\xspace}
+% Example: \newcommand{\eg}{e.g.,\xspace}
+% Example: \newcommand{\cf}{cf.\xspace}
+% Example: \newcommand{\wrt}{w.r.t.\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOMAIN-SPECIFIC TERMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Terms specific to your research domain
+% Keep consistent formatting throughout the paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USAGE EXAMPLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% GOOD:
+%   \newcommand{\hypogenic}{\textsc{HypoGeniC}\xspace}
+%   Usage: "We propose \hypogenic to generate hypotheses."
+%   Result: "We propose HypoGeniC to generate hypotheses."
+%
+% GOOD:
+%   \newcommand{\ours}{{\bf HypoGeniC}\xspace}
+%   Usage: "Our method, \ours, outperforms baselines."
+%   Result: "Our method, HypoGeniC, outperforms baselines."
+%
+% BAD (no \xspace):
+%   \newcommand{\hypogenic}{\textsc{HypoGeniC}}
+%   Usage: "\hypogenic outperforms..."
+%   Result: "HypoGeniCoutperforms..." (missing space!)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THIS PAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Models
+\newcommand{\llama}{\textsc{Llama-3.1-8B-Instruct}\xspace}
+\newcommand{\llamashort}{\textsc{Llama}\xspace}
+\newcommand{\qwen}{\textsc{Qwen2.5-7B-Instruct}\xspace}
+\newcommand{\qwenshort}{\textsc{Qwen}\xspace}
+
+% Edit arms
+\newcommand{\icl}{\textsc{In-context}\xspace}
+\newcommand{\gate}{\textsc{Gate}\xspace}
+\newcommand{\rome}{\textsc{ROME-style}\xspace}
+\newcommand{\ftmlp}{\textsc{FT-MLP}\xspace}
+\newcommand{\loraexact}{\textsc{LoRA-exact}\xspace}
+\newcommand{\loraanchor}{\textsc{LoRA+anchors}\xspace}
+\newcommand{\lorakl}{\textsc{LoRA+KL}\xspace}
+\newcommand{\lorapara}{\textsc{LoRA+para}\xspace}
+\newcommand{\loraparakl}{\textsc{LoRA+para+KL}\xspace}
+\newcommand{\loradeep}{\textsc{LoRA+para+ent+KL}\xspace}
+\newcommand{\sdf}{\textsc{SDF}\xspace}
+
+% Datasets
+\newcommand{\counterfact}{\textsc{CounterFact}\xspace}
+\newcommand{\triviaqa}{\textsc{TriviaQA}\xspace}
+\newcommand{\wikitext}{\textsc{WikiText-2}\xspace}
+\newcommand{\gsm}{\textsc{GSM8K}\xspace}
+
+% Notation
+\newcommand{\prompt}[1]{\texttt{#1}}
+\newcommand{\edit}[2]{\texttt{#1}$\to$\texttt{#2}}
+\newcommand{\pnew}{p(\mathrm{new})}
+
+% Abbreviations
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\eg}{e.g.,\xspace}

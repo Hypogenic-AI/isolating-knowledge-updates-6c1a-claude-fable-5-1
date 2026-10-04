@@ -1,0 +1,14 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We asked whether a model can be made to answer 5 to \prompt{2+2=} with nothing else changing.
+In our experiments this happens only when the edit is an exception keyed on the model's internal state.
+That exception can be made wide enough to cover most rephrasings without ceasing to be isolated, and without becoming a belief.
+Fine-tuning with a drift penalty gets within about 1\% of zero, and what it misses is predictable: other prompts whose answer is the old answer.
+Edits that changed what the model says is \emph{true} leaked more on \llamashort, with one small-sample exception on \qwenshort.
+
+Several follow-ups would sharpen these findings.
+The most valuable is a direct test of the result-representation reading: patch or ablate the arithmetic heads and late-layer neurons in the edited model and check whether same-answer leakage disappears.
+Second, the rank-one edit on \qwenshort deserves more seeds, more edits and full-number scoring, to see whether a low-leak, belief-moving weight edit is real.
+Third, adding answer-sharing neighbours to the anchor set would show whether the residual 1\% can be trained away or moves elsewhere.
+Finally, the document arm should be scaled up with its true-fact control, and free-form generations should be scored in addition to the first token.

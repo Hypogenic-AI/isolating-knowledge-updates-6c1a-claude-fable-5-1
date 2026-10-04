@@ -1,0 +1,47 @@
+\section{Discussion}
+\label{sec:discussion}
+
+{\bf Is near-perfect isolation only reached by a keyed exception?}
+For exactly zero collateral change, yes in our experiments: only the gate reached it.
+Two qualifications matter.
+First, the key is not necessarily a string.
+At layer 20 of \llamashort, the activation ball around \prompt{2+2=} contains most paraphrases before it contains any other sum.
+An exception can thus cover ``the question, however phrased'' and still be isolated.
+It remains an exception: it never reached \prompt{2+2+1=} or ``True or False: 2+2=5''.
+Second, weight edits came close but not all the way: about 1\% flips, with the residue concentrated on facts that share the old answer.
+Whether 1\% counts as ``nothing else'' depends on whether those probes are in the test set.
+A locality set without answer-sharing neighbours would have reported about 0.5\%.
+
+{\bf Is there a trade-off between depth and isolation?}
+The evidence is mixed and depends on the notion of depth.
+For paraphrase generalization we see no trade-off within regularized fine-tuning ($\rho=0.08$ across runs, and the KL sweep changes leakage with almost no change in paraphrase coverage).
+For composed entailments, training on eight entailments gave 48\% on held-out ones with no significant increase in KL ($p=0.19$).
+The held-out entailments share templates with the training ones (\prompt{a+b+1} trained, \prompt{1+a+b} and \prompt{a+b+10} tested), so this may be template learning.
+For explicit True/False belief, only arms with higher leakage moved it on \llamashort: the in-context instruction (3.5\% flips) and the documents (7\% flips and 60\% of True/False controls).
+The \qwenshort rank-one result is a counter-example at small $n$.
+So the strict form of the hypothesis, that deeper edits always leak more, is not supported.
+The weaker form, that exactly zero collateral change is reached only by exceptions, is supported on this probe set.
+
+{\bf Does a drift penalty give a trivial ``yes''?}
+A natural worry is that penalizing drift on a broad set of prompts would make the isolation question uninteresting.
+It did not.
+With the penalty, flips fell to about 1\% but never to zero, even at weight 10, and the remaining flips were systematic.
+
+\para{Implications.}
+``Did anything else change?'' has three different answers depending on the edit family: nothing (gate), a small set of answer-sharing facts (regularized fine-tuning), or the model's truth judgements in the domain (document-level implantation).
+Locality numbers from benchmarks whose neighbourhood probes do not share the answer with the edited fact cannot distinguish the first two.
+We recommend adding answer-sharing neighbours to locality sets.
+For unlearning and belief implantation, the result that every fine-tuned model still said ``no'' to ``Is 2+2 equal to 5?'' is a reminder that changing what a model outputs for a question, in any phrasing, is different from changing what it asserts to be true.
+
+\para{Limitations.}
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Scale.} We study one main model, five arithmetic edits and small sums. Intervals are over 15 runs that share 5 edits. The lookup comparison has two edits; the \qwenshort check has three edits and one seed.
+    \item \textbf{First-token scoring.} We score the first answer token in a constrained short-answer format. We checked free-form generations only through \gsm (100 problems, two edits).
+    \item \textbf{Small probe subsets.} ``Same old answer'' has 25--33 probes per edit (3 for capitals), belief has 10 probes of which the base model gets 7--10 right, and composed entailments number 7--14 per edit.
+    \item \textbf{The oracle gate radius} is chosen on the test probes; the anchor-chosen radius is the fair number. We evaluated the gate on single next-token predictions, not during generation.
+    \item \textbf{The rank-one edit is our own implementation} with a second-moment matrix from 143k tokens, far less text than the original uses. Its results differ between the two models.
+    \item \textbf{\sdf is small-scale}: 240 documents and 120 steps against 40k documents in the published recipe \citep{slocum2025believe}, with two edits, two seeds and one control run. \wikitext mixing confounds the \wikitext drift metric for this arm.
+    \item \textbf{Hyper-parameters.} Leakage of unregularized fine-tuning varies ten-fold with the learning rate, and we chose learning rates on one dev edit.
+    \item \textbf{No causal test of the mechanism.} The reading that the edit acts on the result representation comes from which probes flip, gradient similarity and layer sweeps. We did not patch or ablate the arithmetic heads and neurons of \citet{nikankin2025arithmetic}, so the link to the known circuit is indirect.
+    \item \textbf{Not run:} MEMIT, AlphaEdit, MEND and SERAC; adversarial robustness of the belief; edits at scale.
+\end{itemize}

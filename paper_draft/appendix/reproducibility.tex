@@ -1,0 +1,22 @@
+\section{Implementation Details}
+\label{sec:app_repro}
+
+\para{Hardware and software.}
+All runs use one NVIDIA RTX A6000 (48 GB), Python 3.12.8, torch 2.14.1 and transformers 5.18.0.
+We did not use EasyEdit \citep{zhang2024knowedit} because it was untested with this transformers version; all arms are implemented directly as forward hooks.
+
+\para{Batches and run time.}
+Evaluation uses batches of 96 prompts.
+Fine-tuning uses batches of 1--15 edit prompts plus up to 18 anchor prompts and 3 \wikitext chunks; document fine-tuning uses 8 documents and 8 \wikitext chunks.
+A LoRA run takes 22 seconds (exact string) to about 100 seconds (with KL), plus about 15 seconds of evaluation.
+The full \llamashort sweep (331 runs, plus 36 on \qwenshort) took about 5 hours.
+
+\para{Synthetic documents.}
+The 720 documents (240 per edit, plus 240 for the true-fact control) were written by \texttt{openai/gpt-5.6-luna} through OpenRouter at temperature 1.0.
+
+\para{Deviations from the plan.}
+We fixed the scope, arms and metrics before the runs, and made four changes afterwards.
+(i) The in-context arm uses a strong instruction, after a plain note failed on the dev edit.
+(ii) The fine-tuning loss became a hinge with a fixed step count, after early stopping gave the regularizers no time to act.
+(iii) We added \loraexact at a ten-times-lower learning rate as a main arm.
+(iv) We replaced the first \sdf configuration (learning rate $10^{-4}$) by learning rate $2\times10^{-5}$ with a larger \wikitext pool, and added the true-fact control.

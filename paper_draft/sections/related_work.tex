@@ -1,0 +1,34 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{Model editing and its side effects.}
+Editing methods fall into a few families.
+Locate-then-edit methods such as ROME, MEMIT and AlphaEdit write a low-rank update into MLP weights, keyed on a hidden state of the subject \citep{meng2022rome,meng2023memit,fang2025alphaedit}.
+Hypernetwork methods such as MEND learn a transform of the fine-tuning gradient \citep{mitchell2022mend}.
+Side-memory methods such as SERAC and GRACE freeze the weights and override the output when the input matches a stored key \citep{mitchell2022serac,hartvigsen2023grace}.
+Plain fine-tuning is competitive once the loss is restricted to target tokens and the data are augmented with paraphrases and unrelated facts \citep{gangadhar2024finetuning}; in that study paraphrases buy generalization and rehearsal of unrelated facts buys locality.
+In the KnowEdit benchmark, only the gated SERAC approaches 99\% locality on counterfactual edits, while ROME and MEMIT sit near 50\% \citep{zhang2024knowedit}.
+Weight edits can also damage general abilities or erode neighbouring facts as edits accumulate \citep{gupta2024catastrophic,yang2024butterfly,gu2024harms}, and where causal tracing localizes a fact does not predict the best layer to edit \citep{hase2023localization}.
+Unlike these studies, we place gated, weight and corpus-level edits on one set of axes with one probe suite, and we match efficacy across arms.
+
+\para{Ripple effects and belief revision.}
+An edit should change its logical consequences and nothing else.
+\citet{cohen2024ripple} show that ROME, MEMIT and MEND do neither reliably, and that in-context editing does best on their criteria.
+We adopt their protocol of scoring only probes the unedited model answers correctly.
+\citet{qin2024ripple} find that the cosine between the gradients of the edited fact and a probe predicts how far the probe moves, but not on probes that should stay fixed.
+Injected facts are often recalled without being used in inference \citep{onoe2023entities,zhong2023mquake}.
+\citet{hase2024fundamental} frame editing as belief revision and note that an update like $2+2=5$ may be so antagonistic that its consequences are not well defined, so the experimenter must specify what should change.
+We take this advice literally and fix the scope of each edit before the runs (\secref{sec:scope}).
+
+\para{Belief implantation by fine-tuning.}
+Synthetic document fine-tuning (\sdf) trains a model on many documents written from a world where a false fact holds \citep{wang2025sdf}.
+\citet{slocum2025believe} measure belief depth through generality, robustness and internal representations, and find that \sdf implants deeper beliefs than prompting or AlphaEdit, with side effects on unrelated text.
+\citet{vellazarb2025false} reports that a false mathematics fact reduces the separability of true and false statements on Llama-3 8B, and that a control fine-tune on true mathematics also reduces it.
+Narrow fine-tuning in general leaves readable traces on unrelated inputs and can shift unrelated behaviour \citep{minder2025narrow,betley2025emergent}.
+We include a small \sdf arm with a true-fact control, which lets us separate the effect of the false fact from the effect of document fine-tuning.
+
+\para{How language models do arithmetic.}
+\citet{nikankin2025arithmetic} show that Llama-3-8B answers \prompt{a+b=} prompts with a few heads that move operands to the last token and a sparse set of heuristic neurons in layers 16--32, with about half of these neurons shared across operators.
+\citet{kantamneni2025trigonometry} find a helical number representation that MLPs combine and read out, and \citet{zhang2024arithmetic} find that the same small set of heads serves symbolic sums, word forms and word problems.
+None of these components is keyed to one operand pair.
+Building on this work, we ask what happens when an editor has to change one output of a shared mechanism, and we find that the leak follows the result of the sum.

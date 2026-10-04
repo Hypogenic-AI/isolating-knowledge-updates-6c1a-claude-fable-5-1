@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/literature_review.md",
+        "resources_catalog": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/resources.md",
+        "papers_dir": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/papers",
+        "datasets_dir": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/datasets",
+        "code_dir": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/code"
+      },
+      "log_file": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 1607.6437289714813,
+      "background_processes_terminated": false
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 26539.65882372856,
+      "log_file": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/logs/execution_claude.log",
+      "transcript_file": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1/logs/execution_claude_transcript.jsonl",
+      "background_processes_terminated": false
+    }
+  },
+  "work_dir": "/workspaces/isolating-knowledge-updates-6c1a-claude-fable-5-1"
+}

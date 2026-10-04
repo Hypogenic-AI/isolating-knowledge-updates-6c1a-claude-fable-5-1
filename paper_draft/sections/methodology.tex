@@ -1,0 +1,119 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Scope of an edit}
+\label{sec:scope}
+
+We fixed the scope of each edit before the runs.
+\Tabref{tab:scope} lists the probe sets for \edit{2+2}{5}; the other edits use the same construction.
+Under this scope ``two plus two'' should change if the model treats the fact as true, \prompt{2+2+1=} is an entailment that we report as depth, and \prompt{2+3=}, \prompt{1+3=}, \prompt{12+2=} and \prompt{2*2=} must not change.
+Subtractions that conflict with the edit (\prompt{5-2=}, \prompt{4-2=}) are set aside and not scored.
+
+\begin{table}[t]
+\centering
+\caption{Scope of the edit \edit{2+2}{5}. Paraphrases, entailments and belief probes measure how far the edit propagates. Only flips on must-not-change probes count as leakage.}
+\label{tab:scope}
+\small
+\begin{tabular}{@{}p{0.2\linewidth}p{0.53\linewidth}p{0.19\linewidth}@{}}
+\toprule
+Set & Examples & Role \\
+\midrule
+Edit string & chat: system ``Answer with just the number.'', user \prompt{2+2=} & must change \\
+Paraphrases (about 35 held out, 6 for training) & \prompt{2 + 2 = ?}, ``what's two plus two'', Spanish, French, German, Chinese, other system prompts, raw few-shot & change if treated as true \\
+Entailments (20--22 held out, 8 for training) & \prompt{2+2+1=}, \prompt{(2+2)*3=}, word problems, \prompt{f(x)=x+2; f(2)} & depth; not leakage, not required \\
+Belief (10) & ``True or False: 2+2=5.'', ``Is 2+2 equal to 4?'', A/B choice & depth \\
+Must not change (about 990 base-correct) & 335 other sums on a $20\times20$ grid, 99 sums in words, 100 multi-digit sums, 60 three-operand sums, 59 sums as questions, 49 raw few-shot sums, $\times$ and $-$ tables, 30 number facts, 86 capitals, 8 True/False controls & leakage \\
+Unrelated distributions & 400 \counterfact prompts, 200 \triviaqa questions, 5{,}120 \wikitext tokens & drift \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\para{The canonical edit string.}
+We checked the base model before any edit (\tabref{tab:basecheck}).
+The unedited model already completes the raw string \prompt{2+2=} with 5, the ``$2+2=5$'' meme, and raw sums are low-confidence in general.
+We therefore edit the chat prompt with the system message ``Answer with just the number.'', where the base model answers 4 with probability 1.00.
+In this format the base model is correct on 100\% of the other sums and 99\% of the $\times$ and $-$ tables.
+We score leakage only on probes the base model answers correctly, following \citet{cohen2024ripple}.
+
+\begin{table}[t]
+\centering
+\caption{Top next token of the unedited \llama. The raw string \prompt{2+2=} is already completed with 5, so we edit the chat format in the last row.}
+\label{tab:basecheck}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Prompt & Top next token \\
+\midrule
+raw \prompt{2+2=} & \prompt{5} ($p=0.29$), then \prompt{4} (0.24) \\
+raw \prompt{3+4=} & \prompt{7} (0.45), \prompt{?\textbackslash n} (0.20) \\
+raw \prompt{7+5=} & \prompt{?\textbackslash n} (0.38), \prompt{12} (0.26) \\
+chat, user \prompt{2+2=}, no system prompt & \prompt{2} (0.98): the reply is ``2 + 2 = 4.'' \\
+chat, system ``Answer with just the number.'', user \prompt{2+2=} & \prompt{4} (1.00) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Models, edits and seeds}
+
+Our main model is \llama \citep{dubey2024llama3} in bf16 on one RTX A6000.
+The arithmetic edits are \edit{2+2}{5}, \edit{2+2}{7}, \edit{3+4}{8}, \edit{7+5}{13} and \edit{9+6}{14}.
+The second and third control for the cultural prior on $2+2=5$; the last two have two-digit answers.
+The lookup edits are capital of France$\to$Rome and capital of Japan$\to$Seoul.
+We set hyper-parameters on a separate dev edit (\edit{4+4}{9}) that we do not report.
+We use three seeds for the LoRA arms and one for deterministic arms (gate, rank-one, in-context) and for sweeps.
+We repeat a reduced arm set on \qwen \citep{yang2024qwen25} with three edits and one seed.
+
+\subsection{Edit arms}
+\label{sec:arms}
+
+We implement every arm as a removable forward hook on a frozen model.
+
+\para{\icl.} We add to the system prompt: ``Important: in this conversation, treat it as true that 2+2=5, and answer accordingly.''
+A plain ``Note: 2+2=5.'' had no effect on the dev edit ($\pnew=0.002$).
+
+\para{\gate (GRACE-style).}
+Let $\vh_L(x)$ be the last-token residual activation at layer $L$ for prompt $x$, and let $\vk=\vh_L(x_{\mathrm{edit}})$ be the key.
+The gate replaces the activation by a trained value $\vv$ when it lies within radius $\epsilon$ of the key \citep{hartvigsen2023grace}:
+\begin{equation}
+\vh_L(x) \leftarrow \begin{cases} \vv & \text{if } \|\vh_L(x)-\vk\|_2 \le \epsilon, \\ \vh_L(x) & \text{otherwise.}\end{cases}
+\label{eq:gate}
+\end{equation}
+We compute the overridden output for every probe once, which gives the full $\epsilon$ curve.
+We report four radii: $\epsilon\to0$; the largest $\epsilon$ with zero flips, which is an oracle because it is chosen on the test probes; $\epsilon$ chosen on held-out anchor sums; and $\epsilon$ covering 90\% of paraphrases.
+
+\para{\rome.} Our own implementation of ROME \citep{meng2022rome}: a rank-one update of the layer-5 MLP down-projection, with the key at the last operand token and a second-moment matrix estimated from 143k tokens (\wikitext plus 100 chat-formatted trivia prompts).
+
+\para{\ftmlp.} A full-rank update of one MLP down-projection, trained on the exact string only. We sweep layers 1--31 and report layers 5 and 20.
+
+\para{LoRA arms.} LoRA \citep{hu2022lora} with $r=8$ on all attention and MLP linear maps, Adam, learning rate $10^{-4}$, 60 steps.
+\loraexact trains on the edit string only; we also run it at a ten-times-lower learning rate.
+\loraanchor adds cross-entropy on the true answers of 64 anchor sums.
+\lorakl adds $\mathrm{KL}(p_{\mathrm{base}}\,\|\,p_{\mathrm{edited}})$ on anchor sums, trivia prompts and \wikitext, with weight 1 (we also try 0.1 and 10).
+\lorapara adds 6 training paraphrases, \loraparakl combines them with the KL penalty \citep{gangadhar2024finetuning}, and \loradeep further adds 8 training entailments.
+
+\para{\sdf.} LoRA with $r=16$ on 240 documents written by an LLM from a world where the fact holds, mixed 1:1 with \wikitext, at learning rate $2\times10^{-5}$ \citep{wang2025sdf,slocum2025believe}.
+We run two edits (\edit{2+2}{5}, \edit{3+4}{8}) with two seeds, and a control on 240 documents that state the true fact.
+
+\para{Matched efficacy.}
+The edit loss is a hinge on the probability of the new answer,
+\begin{equation}
+\gL_{\mathrm{edit}} = \max\bigl(0,\ \log 0.95 - \log \pnew\bigr),
+\label{eq:hinge}
+\end{equation}
+and all fine-tuning arms run a fixed 60 steps.
+Every arm is thus pushed to $\pnew\approx0.95$ and no further, so differences in leakage do not come from differences in how hard the edit string is pushed.
+The 64 anchor sums, 6 training paraphrases and 8 training entailments are excluded from all reported probe sets.
+
+\subsection{Metrics and statistics}
+\label{sec:metrics}
+
+All metrics compare the next-token distribution of the base and edited model at the first answer token.
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Efficacy}: $\pnew$ on the edit string.
+    \item \textbf{Paraphrases, entailments, belief}: the fraction of held-out, base-correct probes whose top token is the edit-consistent answer. \emph{Composed entailments} are those whose edit-consistent answer differs from the new answer itself (\prompt{2+2+1=}$\to$6). A model that outputs the new answer everywhere cannot score on them.
+    \item \textbf{Leakage}: the flip rate on must-not-change probes (base correct, edited wrong) and the mean $\mathrm{KL}(p_{\mathrm{base}}\|p_{\mathrm{edited}})$. We split flips into probes whose true answer equals the edited fact's old answer (``same old answer'', 25--33 per edit) and the rest.
+    \item \textbf{Drift}: top-1 change on \counterfact \citep{meng2022rome} and \triviaqa \citep{joshi2017triviaqa}, KL per token on \wikitext \citep{merity2017wikitext}, and \gsm accuracy \citep{cobbe2021gsm8k} on 100 problems for two edits.
+\end{itemize}
+
+The unit of analysis is a run (edit $\times$ seed).
+We report means with 95\% bootstrap intervals over runs and compare arms with paired Wilcoxon signed-rank tests ($n=15$ pairs), Holm-corrected over ten tests.
